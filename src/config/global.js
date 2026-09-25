@@ -1,8 +1,9 @@
 export default {
   global: {
-    Name: 'Nombre del recurso educativo',
-    Description: 'Descripción del RED',
-    imagenBannerPrincipal: '@/assets/curso/portada/banner-principal.svg',
+    Name: 'Planteamiento de alternativas para el reúso de aguas lluvias',
+    Description:
+      'Este componente desarrolla el análisis del Índice de Precipitación Estandarizado (IPE), los sistemas de aprovechamiento de aguas lluvias y las relaciones entre almacenamiento, rendimiento y fiabilidad. Integra capacidad, volumen, configuraciones de uso, métricas de desempeño y curvas SRY para interpretar el comportamiento del sistema y sustentar alternativas de reúso bajo diferentes condiciones de precipitación y demanda.',
+    imagenBannerPrincipal: '@/assets/curso/portada/banner-principal.png',
     fondoBannerPrincipal: '@/assets/curso/portada/fondo-banner-principal.png',
     imagenesDecorativasBanner: [
       {
