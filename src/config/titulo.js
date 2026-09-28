@@ -1,1 +1,1 @@
-module.exports = 'Ecored Base PKG'
+module.exports = 'Planteamiento de alternativas para el reúso de aguas lluvias'
