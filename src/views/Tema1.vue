@@ -13,6 +13,7 @@
     
     p.mb-0 El Índice de Precipitación Estandarizado (IPE) permite analizar el comportamiento de la precipitación respecto de sus condiciones históricas y reconocer anomalías en diferentes escalas temporales. Su aplicación facilita diferenciar condiciones húmedas y secas y valorar la persistencia de estas condiciones a lo largo del tiempo. 
 
+
     separador
     #t_1_1.titulo-segundo.mb-5
       h2 1.1 Fundamentos, escalas e interpretación del IPE
@@ -182,28 +183,135 @@
     .row.justify-content-center.align-items-center.mb-5
       .col-lg-8
         p.mb-4 La escala temporal del IPE determina el periodo durante el cual se acumula la precipitación antes de compararla con su comportamiento histórico. Por esta razón, un mismo mes puede presentar valores diferentes de IPE según se analice a escalas de 1, 3, 6, 9, 12 o 24 meses. Esta capacidad de análisis multiescalar permite reconocer diferentes respuestas de los sistemas hidroclimáticos frente a déficits o excesos de precipitación (WMO, 2012).
-        .bg5.p-4.p-lg-4
-          p.mb-4.mx-lg-2 Las escalas temporales deben entenderse como una guía para seleccionar el periodo de análisis de acuerdo con la pregunta que se pretende responder y no como una clasificación rígida. Las escalas cortas reaccionan con mayor rapidez a cambios recientes en la precipitación, mientras que las escalas mayores integran condiciones acumuladas y permiten reconocer anomalías más persistentes. 
+        .bg5.p-4
+          p.mb-4.mx-lg-2.mt-lg-1 Las escalas temporales deben entenderse como una guía para seleccionar el periodo de análisis de acuerdo con la pregunta que se pretende responder y no como una clasificación rígida. Las escalas cortas reaccionan con mayor rapidez a cambios recientes en la precipitación, mientras que las escalas mayores integran condiciones acumuladas y permiten reconocer anomalías más persistentes. 
           p.mb-0.mx-lg-2 En el contexto de este componente, esta distinción es especialmente relevante porque posteriormente se analizará el comportamiento de sistemas de almacenamiento de aguas lluvias. Una condición negativa en IPE-1 puede representar un déficit reciente, mientras que valores persistentemente negativos en IPE-12 o IPE-24 pueden evidenciar condiciones acumuladas que deben considerarse al evaluar el almacenamiento. La escala seleccionada debe guardar relación tanto con el fenómeno analizado como con el tiempo de respuesta del sistema. 
       .col-lg-4.d-none.d-lg-block
         img(src='@/assets/curso/tema1/17.png')
 
+    .row.justify-content-center.align-items-center.mb-5
+      .col-lg-5.mb-lg-0.mb-0.d-none.d-lg-block(data-aos="fade-right")
+        img.img-t(src='@/assets/curso/tema1/18.png')
+      .col-lg-7(data-aos="fade-left")
+        .bg22.mb-0.p-4.cen
+          img.img-t.mb-4.mx-lg-4(src='@/assets/curso/tema1/19.svg')
+          p.mb-0.mx-lg-4.text-white Por ejemplo, si se requiere determinar si durante el último mes se presentó una anomalía de precipitación, puede emplearse IPE-1. Para analizar el comportamiento acumulado durante una estación resulta más apropiado IPE-3. Si se busca reconocer una condición persistente con posibles implicaciones para el almacenamiento de agua, pueden resultar más informativas escalas como IPE-6, IPE-12 o IPE-24. 
+
+    .cajon.color-acento-botones.p-4.mb-0
+      p.mb-0 A menor escala temporal, mayor sensibilidad a las condiciones recientes; a mayor escala temporal, mayor capacidad para identificar la persistencia y la acumulación de las anomalías de precipitación. 
 
 
+    separador
+    #t_1_2.titulo-segundo.mb-5
+      h2 1.2 Cálculo del IPE
 
+    .row.justify-content-center.align-items-center.mb-5
+      .col-lg-5
+        img(src='@/assets/curso/tema1/20.png')
+      .col-lg-7
+        .row.justify-content-center.align-items.mb-4
+          .col-lg-2
+            img.img-t(src='@/assets/curso/tema1/21.svg')
+          .col-lg-10.ps-lg-0
+            p.mb-0 El cálculo del IPE requiere una serie histórica de precipitación suficientemente extensa y consistente. La OMM recomienda disponer, como mínimo, de alrededor de treinta años de datos mensuales continuos, aunque registros de mayor longitud son preferibles para mejorar la caracterización estadística de los eventos extremos (WMO, 2012).
+        p.mb-0 El procedimiento parte de la revisión de la serie histórica y continúa con la definición de la escala de acumulación, el ajuste de una distribución de probabilidad, la estandarización de la probabilidad obtenida y, finalmente, la determinación del valor del IPE.
 
+    .tit.mb-5(data-aos="fade-right")
+      img(:src="require_src('@/assets/curso/tema1/sub.svg')")
+      h3.mb-0 Proceso de cálculo del Índice de Precipitación Estandarizado (IPE)
 
+    .row.justify-content-center.align-items-center.mb-5(data-aos="fade-left")
+      .col-lg-3.d-none.d-lg-block
+        img(src='@/assets/curso/tema1/22.png')
+      .col-lg-9
+        TabsA.color-acento-botones.mb-0
+          .tarjeta.color-a.p-4(titulo="Precipitación histórica")
+            .row.justify-content-center.align-items-center
+              .col-lg-12 
+                p.mb-0 Se parte de una serie histórica larga y continua de precipitación, mensual o diaria, para la estación o región de interés. Para el cálculo del IPE se requiere una serie suficientemente extensa y consistente; la OMM recomienda disponer de alrededor de treinta años de datos mensuales continuos, aunque registros más largos son preferibles.
+          .tarjeta.color-a.p-4(titulo="Acumulación temporal")
+            .row.justify-content-center.align-items-center
+              .col-lg-12 
+                p.mb-0 La precipitación se acumula para la escala temporal seleccionada. Por ejemplo, en un IPE-3 se trabaja con acumulaciones móviles de tres meses. La selección de la escala debe responder al fenómeno analizado.
+          .tarjeta.color-a.p-4(titulo="Distribución gamma")
+            .row.justify-content-center.align-items-center
+              .col-lg-12 
+                p.mb-0 Los valores acumulados se ajustan a una distribución gamma. A partir de los datos históricos se estiman los parámetros de la distribución, correspondientes a la forma (α) y la escala (β). En aplicaciones recientes también se emplean métodos como los L-momentos para estimar estos parámetros (WMO, 2012; Copernicus European Drought Observatory, 2025).
+          .tarjeta.color-a.p-4(titulo="Probabilidad acumulada")
+            .row.justify-content-center.align-items-center
+              .col-lg-12 
+                p.mb-0 A partir de la distribución gamma ajustada se calcula la probabilidad acumulada F(x) asociada con cada valor observado de precipitación acumulada. Los valores de la probabilidad acumulada se encuentran entre 0 y 1.
+          .tarjeta.color-a.p-4(titulo="Distribución normal estándar")
+            .row.justify-content-center.align-items-center
+              .col-lg-12 
+                p.mb-0 La probabilidad acumulada F(x) se transforma mediante una distribución normal estándar, con media 0 y desviación estándar 1, para obtener un valor estandarizado
+          .tarjeta.color-a.p-4(titulo="Valor del IPE")
+            .row.justify-content-center.align-items-center
+              .col-lg-12 
+                p.mb-0 El valor estandarizado obtenido corresponde al IPE para la escala temporal seleccionada. Los valores negativos representan condiciones más secas y los positivos, condiciones más húmedas respecto del comportamiento histórico.
 
+    p.mb-5 Las etapas relacionadas con el ajuste de la distribución de probabilidad y la estandarización pueden representarse conceptualmente mediante las siguientes expresiones.
 
+    .row.justify-content-center.align-items-center.mb-5
+      .col-lg-8
+        p.mb-3 #[b Ecuación 1.] Ajuste de la distribución de probabilidad
+        .row.justify-content-center.align-items-center.mb-4
+          .col-lg-5
+            math.formula(display="block")
+              mrow
+                mi P
+                mo(stretchy="false") (
+                mi x
+                mo(stretchy="false") )
+                mo =
+                msubsup
+                  mo(largeop="true") ∫
+                  mn 0
+                  mi x
+                mi f
+                mo(stretchy="false") (
+                mi u
+                mo(stretchy="false") )
+                mi(mathvariant="normal") d
+                mi u
+        .bg5.p-4
+          p.mb-4.mx-lg-2 donde P(x)representa la probabilidad acumulada asociada a un determinado valor de precipitación. 
+          p.mb-4.mx-lg-2 Cuando existen registros con precipitación igual a cero, debe considerarse su probabilidad específica antes de obtener la probabilidad acumulada final. Esta consideración es importante porque la distribución gamma se ajusta a valores positivos de precipitación (Copernicus European Drought Observatory, 2025). 
+          p.mb-0.mx-lg-2 La probabilidad acumulada obtenida se transforma posteriormente mediante una distribución normal estándar, con media igual a cero y desviación estándar igual a uno. El resultado de esta transformación corresponde al valor del IPE (WMO, 2012). 
+      .col-lg-4.d-none.d-lg-block
+        img(src='@/assets/curso/tema1/23.png')
 
+    .row.justify-content-center.align-items-center.mb-5
+      .col-lg-5.d-none.d-lg-block
+        img(src='@/assets/curso/tema1/24.png')
+      .col-lg-7
+        .row.justify-content-center.align-items-end.mb-0
+          .col-lg-6.col-md-9.col-12.mb-lg-0.mb-0.d-none.d-lg-block(data-aos="fade-right")
+            img.img-t(src='@/assets/curso/tema1/25.svg')
+          .col-lg-6(data-aos="fade-left")
+            .bg3.mb-0.p-4
+              p.mb-0.mx-lg-4.mt-lg-2.mb-lg-1 #[b Ecuación 2.] Cálculo del IPE
+            .bg4.mb-0.p-4
+              .row.justify-content-center.align-items-center.mb-1
+                .col-lg-7
+                  .formula1 
+                    p.mb-0 IPE=Φ⁻¹ [F(x)]
+              p.mb-4 donde:
+              p.mb-0 #[b IPE:] Índice de Precipitación Estandarizado. F(x): probabilidad acumulada de precipitación. Φ⁻¹: función inversa de la distribución normal estándar. 
 
+    .cajon.color-acento-botones.p-4.mb-5
+      p.mb-0 #[b El IPE no corresponde simplemente a la precipitación observada menos el promedio histórico.] El índice transforma la precipitación acumulada mediante una distribución de probabilidad y la convierte en una escala estandarizada, con media igual a cero y desviación estándar igual a uno, lo que permite comparar diferentes lugares y escalas temporales.
 
-
-
-
-
-
-
+    .row.justify-content-center.align-items-center.mb-0
+      .col-lg-5
+        img(src='@/assets/curso/tema1/26.png')
+      .col-lg-7
+        .row.justify-content-center.align-items.mb-4
+          .col-lg-2
+            img.img-t(src='@/assets/curso/tema1/27.svg')
+          .col-lg-10.ps-lg-0
+            p.mb-0 El procedimiento se repite para cada escala temporal seleccionada, por ejemplo, IPE-1, IPE-3, IPE-6 o IPE-12, de acuerdo con el propósito del análisis. De esta manera, una misma serie histórica puede generar valores diferentes del IPE según el periodo de acumulación utilizado.
+        p.mb-0 La obtención del valor estandarizado constituye el cierre del proceso de cálculo. Su significado debe interpretarse posteriormente a partir del rango en el que se encuentra y de la escala temporal utilizada, siguiendo los criterios desarrollados en el apartado 1.1.
 
 
 </template>

@@ -115,6 +115,27 @@ figcaption
     min-height: auto
   @media only screen and (min-width: 1024px) 
     margin-left: -1.6rem
+.bg22
+  background-color:#18485C
+  min-height: 354px
+  @media only screen and (max-width: 1023px)
+    min-height: auto
+  @media only screen and (min-width: 1024px) 
+    margin-left: -1.6rem
+.bg222
+  background-color:#18485C
+  min-height: 378.21px
+  @media only screen and (max-width: 1023px)
+    min-height: auto
+  @media only screen and (min-width: 1024px) 
+    margin-left: -1.6rem
+.bg2222
+  background-color:#18485C
+  min-height: 419.2px
+  @media only screen and (max-width: 1023px)
+    min-height: auto
+  @media only screen and (min-width: 1024px) 
+    margin-left: -1.6rem
 
 .bg3
   background-color: #F9F7F0
@@ -132,10 +153,24 @@ figcaption
     margin-left: -3.3rem
 
 .bg5
-  background-color: #D5F6EB
+  background-color: #B6D7E2
+  @media (min-width: 992px) 
+    .mx-lg-2 
+      margin-right: 1.5rem !important
+      margin-left: 1.9rem !important
   @media only screen and (min-width: 1024px) 
     margin-left: -3.4rem
 
+.bg6
+  background-color: #133949
+  border-radius: 20px
+
+.bg7
+  background-color: #56CBF0
+  border-radius: 20px
+
+.bg8
+  background-color: #B6D7E2
 
 
 
@@ -146,12 +181,29 @@ figcaption
 
 
 
+.fa-drop.gt3
+  content: url('../assets/curso/tema2/gt3.svg')
+  position: relative
+  width: 1em  
+  height: 1em 
+  top: 0px !important
 
-  
-
+.fa-che.gt4
+  content: url('../assets/curso/tema2/gt4.svg')
+  position: relative
+  width: 1em  
+  height: 1em 
+  top: 0px !important
 
 .fa-check
   content: url('../assets/curso/tema1/gt.svg')
+  position: relative
+  width: 1em  
+  height: 1em 
+  top: 0px !important
+
+.fa-che.gt2
+  content: url('../assets/curso/tema2/gt2.svg')
   position: relative
   width: 1em  
   height: 1em 
@@ -171,6 +223,36 @@ figcaption
   height: 70px
   position: absolute
   top: 70%
+  left: -15px 
+  transform: translateY(-50%)
+  object-fit: contain
+  z-index: 1
+  @media only screen and (min-width: 768px) and (max-width: 1023px)
+    width: 55px
+    height: 55px
+    top: 10%
+  @media only screen and (max-width: 767px)
+    top: 48%
+    width: 55px
+    height: 55px
+
+.sub
+  background-color: #18485C
+  border-radius: 15px 30px  0px 50px 
+  width: fit-content
+  padding: 9px 30px 9px 70px
+  position: relative
+  display: inline-flex
+  align-items: center
+  margin-left: 15px
+  &
+    h4
+      color: white
+.sub img
+  width: 50px
+  height: 50px
+  position: absolute
+  top: 50%
   left: -15px 
   transform: translateY(-50%)
   object-fit: contain
@@ -204,10 +286,79 @@ figcaption
     h3
       color: black 
 
+.cajon.color-acento-botones
+  background-color: #E7F2FB
+  &:before 
+    background-color:#0A222C
 
+.color-acento-botones
+  .tabs-a__tab
+    padding: 12px 13px
+    font-size: 16px  
+    white-space: normal 
+    line-height: 1.4
+    min-height: 40px 
+  @media (min-width: 1200px) 
+    .col-xl-3
+      flex: 0 0 auto
+      width: 35%
+    .col-xl-9
+      flex: 0 0 auto
+      width: 65%
+.tabs-a__tab:last-child 
+  margin-bottom: 0 !important
+  background-color: #B6D7E2
+  color: black //para hover deja texto como se pide en activo
+.color-a
+  background-color: #BBB0F6
+.tabs-a.color-acento-botones .tabs-a__tab__selected 
+  background-color: #0A222C!important
+  color: white !important
+.tabs-a.color-acento-botones .tabs-a__tab__selected:before 
+  background-color:  #0A222C!important
 
+.formula,
+.formula1,
+.formula2,
+.formula3
+  border: 3px solid #BBB0F6
+  padding: 1.5rem 1rem
+  margin: 1rem 0
+  text-align: center
+  overflow-x: auto
+  math
+    font-size: 1rem
+.formula1
+  background-color: white
+.formula2
+  border-color: #56CBF0
+  background-color: #E7F2FB
+.formula3
+  border-color: #FFFFFF
+  background-color: #AFD4F1
+.recta mi
+  text-transform: none
+  font-style: normal
 
+.img-infografica-b__modal 
+  background-color: #BBB0F6
+  border-radius: 20px
+  animation: entrada-modal 0.2s ease-in-out forwards
+  min-height: 357px !important
+  &
+    p, h4, * 
+      color: $color-sistema-texto!important
 
+.br
+  border-bottom: 3px solid white
+
+.bi
+  border-left: 3px solid white
+
+.cajon.color-primario
+  background-color: #ACB8C6
+  &:before 
+    background-color:#0A222C
 
 
 
@@ -247,9 +398,6 @@ figcaption
       border-left: 2.9px solid #AFAFAF
     td:first-child
       border-left: none
-.bgr
-  background-color: #F6F6F6
-
   &.tab1
     th:nth-child(1)
       width: 20%
@@ -258,32 +406,60 @@ figcaption
     th:nth-child(3)
       width: 55%
 
-
-
-  // Tabla 2
-  &.tab2
-    th:nth-child(1)
-      width: 30%
-    th:nth-child(2)
-      width: 40%
-    th:nth-child(3)
-      width: 30%
-
-
-
-  // Tabla 3
   &.tab3
     th:nth-child(1)
-      width: 25%
+      width: 18%
     th:nth-child(2)
-      width: 25%
+      width: 22%
     th:nth-child(3)
-      width: 25%
+      width: 30%
     th:nth-child(4)
-      width: 25%
+      width: 30%
 
 
+.bgr
+  background-color: #F6F6F6
 
+
+  
+////////////////////////TABLAS PEQUEÑAS//////////////////////////////
+
+.tabla-a.tabla-peq
+  overflow-x: visible !important
+  overflow: visible !important
+  @media (max-width: 991px)
+    overflow-x: auto !important
+    -webkit-overflow-scrolling: touch !important
+    display: block !important
+  table
+    min-width: auto !important
+    width: 100% !important
+    table-layout: auto !important
+    @media (max-width: 991px)
+      min-width: 500px !important 
+
+.tabla-a.tabla-peq.tabla1
+  thead 
+    border-top: 4px solid #56CBF0
+    color: white
+    background-color: #6350C7
+  tbody
+    td
+      border-left: none
+    td:first-child
+      border-left: none
+  th, td
+    border: 1px solid #E1E1E1
+  table th
+    padding: 12px 10px
+  table td 
+    padding: 10px 15px
+  th:nth-child(1)
+    width: 50%
+  th:nth-child(2)
+    width: 50%
+.bgw
+  background-color: white
 
 
 

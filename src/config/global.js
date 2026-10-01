@@ -44,13 +44,35 @@ export default {
             titulo: 'Fundamentos, escalas e interpretación del IPE',
             hash: 't_1_1',
           },
+          {
+            numero: '1.2',
+            titulo: 'Cálculo del IPE',
+            hash: 't_1_2',
+          },
         ],
       },
       {
         nombreRuta: 'tema2',
         numero: '2',
-        titulo: 'Tema 2',
+        titulo: 'Sistemas de aprovechamiento de agua lluvia',
         desarrolloContenidos: true,
+        subMenu: [
+          {
+            numero: '2.1',
+            titulo: 'Capacidad y métricas de desempeño de Hashimoto',
+            hash: 't_2_1',
+          },
+          {
+            numero: '2.2',
+            titulo: 'Tipos de sistemas de almacenamiento de aguas lluvias',
+            hash: 't_2_2',
+          },
+          {
+            numero: '2.3',
+            titulo: 'Volumen, configuraciones de uso y rendimientos',
+            hash: 't_2_3',
+          },
+        ],
       },
       {
         nombreRuta: 'tema3',
