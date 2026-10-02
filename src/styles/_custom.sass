@@ -105,6 +105,7 @@ figcaption
   display: block
   margin: auto
 
+
 .bg1
   background-color: #E7F2FB
 
@@ -151,7 +152,14 @@ figcaption
     min-height: auto
   @media only screen and (min-width: 1024px) 
     margin-left: -3.3rem
-
+.bg44
+  background-color: #E7F2FB
+  min-height: 382.13px
+  @media only screen and (max-width: 1023px)
+    min-height: auto
+  @media only screen and (min-width: 1024px) 
+    margin-left: -3.3rem
+    
 .bg5
   background-color: #B6D7E2
   @media (min-width: 992px) 
@@ -172,14 +180,8 @@ figcaption
 .bg8
   background-color: #B6D7E2
 
-
-
-
-
-
-
-
-
+.bg9
+  background-color: #F9F7F0
 
 .fa-drop.gt3
   content: url('../assets/curso/tema2/gt3.svg')
@@ -190,16 +192,16 @@ figcaption
 
 .fa-che.gt4
   content: url('../assets/curso/tema2/gt4.svg')
-  position: relative
-  width: 1em  
-  height: 1em 
+  position: relative !important
+  width: 1em !important
+  height: 1em !important
   top: 0px !important
 
 .fa-check
   content: url('../assets/curso/tema1/gt.svg')
-  position: relative
-  width: 1em  
-  height: 1em 
+  position: relative !important
+  width: 1em !important
+  height: 1em !important
   top: 0px !important
 
 .fa-che.gt2
@@ -212,6 +214,8 @@ figcaption
 .tit
   background-color: #AFD4F1
   border-radius: 15px 50px  50px 50px 
+  @media only screen and (max-width: 1023px)
+    border-radius: 50px
   width: fit-content
   padding: 9px 30px 9px 70px
   position: relative
@@ -230,15 +234,17 @@ figcaption
   @media only screen and (min-width: 768px) and (max-width: 1023px)
     width: 55px
     height: 55px
-    top: 10%
+    top: 55%
   @media only screen and (max-width: 767px)
-    top: 48%
+    top: 55%
     width: 55px
     height: 55px
 
 .sub
   background-color: #18485C
   border-radius: 15px 30px  0px 50px 
+  @media only screen and (max-width: 1023px)
+    border-radius: 50px
   width: fit-content
   padding: 9px 30px 9px 70px
   position: relative
@@ -260,9 +266,9 @@ figcaption
   @media only screen and (min-width: 768px) and (max-width: 1023px)
     width: 55px
     height: 55px
-    top: 10%
+    top: 50%
   @media only screen and (max-width: 767px)
-    top: 48%
+    top: 50%
     width: 55px
     height: 55px
 
@@ -322,7 +328,7 @@ figcaption
 .formula2,
 .formula3
   border: 3px solid #BBB0F6
-  padding: 1.5rem 1rem
+  padding: 1rem
   margin: 1rem 0
   text-align: center
   overflow-x: auto
@@ -354,20 +360,55 @@ figcaption
 
 .bi
   border-left: 3px solid white
+  @media only screen and (max-width: 1023px)
+    border-left: none
 
 .cajon.color-primario
   background-color: #ACB8C6
   &:before 
     background-color:#0A222C
 
+.tarjeta.color-primario.des
+  background-color: #ACB8C6
+  border-radius: 10px
+  background-size: 100% 100%
+  background-repeat: no-repeat
+  background-position: center 
 
+.tarjeta--gris
+  background-color: #BBB0F6
+.linea-tiempo-d
+  .tarjeta
+    border-radius: 5px
+  &.color-secundario
+    .linea-tiempo-d__item--selected .linea-tiempo-d__item__content
+      background-color: #B9C7CE
+    &.activo
+      .linea-tiempo-d__item__number
+        background-color: #BBB0F6
+      .linea-tiempo-d__item--selected .linea-tiempo-d__item__number
+        background-color: #0A222C
+        color: white !important
+  @media (max-width: 767px)
+    .tarjeta
+      padding: 0.5rem
+  @media (min-width: 768px) and (max-width: 1439px)
+    &.color-acento-boton .linea-tiempo-d__item--selected .linea-tiempo-d__item__content
+      padding: 0.5rem
 
-
-
-
-
-
-
+.tarjeta-audio 
+  border: 3px solid
+.tarjeta-audio.color-acento-botones .tarjeta-audio__texto 
+  color: black
+.fst-italic 
+  font-style: normal !important
+.tarjeta.color-secundario i
+  color: #000
+.tarjeta-audio.color-acento-botones .tarjeta-audio__texto
+  color: black
+  font-style: normal !important
+.tarjeta.color-secundario * 
+  color: #000
 
 
 //////////////////////////////////////TABLAS////////////////////////////////////
@@ -398,6 +439,7 @@ figcaption
       border-left: 2.9px solid #AFAFAF
     td:first-child
       border-left: none
+
   &.tab1
     th:nth-child(1)
       width: 20%
@@ -416,12 +458,10 @@ figcaption
     th:nth-child(4)
       width: 30%
 
-
 .bgr
   background-color: #F6F6F6
 
 
-  
 ////////////////////////TABLAS PEQUEÑAS//////////////////////////////
 
 .tabla-a.tabla-peq

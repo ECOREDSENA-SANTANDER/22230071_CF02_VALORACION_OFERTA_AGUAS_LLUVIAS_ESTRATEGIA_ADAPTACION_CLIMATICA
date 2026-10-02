@@ -19,13 +19,13 @@
       h2 1.1 Fundamentos, escalas e interpretación del IPE
 
     .row.justify-content-center.align-items-center.mb-5
-      .col-lg-5
+      .col-lg-5.d-none.d-lg-block
         img(src='@/assets/curso/tema1/2.png')
       .col-lg-7
         .row.justify-content-center.align-items.mb-4
-          .col-lg-2
-            img.img-t(src='@/assets/curso/tema1/3.svg')
-          .col-lg-10.ps-lg-0
+          .col-lg-2.col-md-2.col-5.mb-lg-0.mb-4
+            img(src='@/assets/curso/tema1/3.svg')
+          .col-lg-10.col-md-10
             p.mb-0 El Índice de Precipitación Estandarizado (IPE) es un indicador climático que permite determinar qué tan anómala es la precipitación acumulada en un periodo determinado respecto del comportamiento histórico de esa misma variable. El índice utiliza únicamente la precipitación como variable de entrada y transforma su distribución de probabilidad en una distribución normal estandarizada (World Meteorological Organization [WMO], 2012).
         p.mb-0 Una de las principales ventajas del IPE es su flexibilidad temporal. Puede calcularse para diferentes escalas de acumulación, por ejemplo, IPE-1, IPE-3, IPE-6, IPE-9, IPE-12 o IPE-24, donde el número indica la cantidad de meses acumulados. Las escalas cortas permiten identificar condiciones recientes de déficit o exceso de precipitación, mientras que las escalas más largas permiten reconocer señales persistentes relacionadas con las condiciones hidrológicas y el almacenamiento de agua (WMO, 2012).
 
@@ -97,7 +97,7 @@
       .col-lg-5.d-none.d-lg-block
         img(src='@/assets/curso/tema1/7.png')
       .col-lg-7
-        .row.mb-3
+        .row.mb-lg-3.mb-4
           .col-lg-6.col-md-9.col-12.mb-lg-0.mb-0.d-none.d-lg-block(data-aos="fade-right")
             img.img-t(src='@/assets/curso/tema1/8.svg')
           .col-lg-6(data-aos="fade-left")
@@ -120,13 +120,13 @@
         p.mb-0 No sería suficiente afirmar que existe “sequía”. La interpretación debe reconocer que existe una condición moderadamente seca a corto plazo, una condición cercana a la normal en tres meses, una condición severamente seca en seis meses y una condición extremadamente seca en doce meses.
 
     .row.justify-content-center.align-items-center.mb-5
-      .col-lg-5
+      .col-lg-5.d-none.d-lg-block
         img(src='@/assets/curso/tema1/9.png')
       .col-lg-7
         .row.justify-content-center.align-items.mb-4
-          .col-lg-2
-            img.img-t(src='@/assets/curso/tema1/10.svg')
-          .col-lg-10.ps-lg-0
+          .col-lg-2.col-md-2.col-5.mb-lg-0.mb-4
+            img(src='@/assets/curso/tema1/10.svg')
+          .col-lg-10.col-md-10
             p.mb-0 Esta comparación permite identificar la persistencia temporal del déficit de precipitación, aspecto particularmente relevante al analizar posteriormente el comportamiento de los sistemas de almacenamiento. 
         p.mb-0 #[b La Organización Meteorológica Mundial (OMM)] establece que un evento de sequía se inicia cuando el valor del IPE alcanza −1,0 o menos y termina cuando vuelve a ser positivo. La duración y la magnitud del evento pueden analizarse a partir de la sucesión de valores negativos. Asimismo, la OMM relaciona las escalas cortas con las condiciones de humedad del suelo y las escalas largas con los caudales, el almacenamiento en embalses y las aguas subterráneas (WMO, 2012).
 
@@ -206,13 +206,13 @@
       h2 1.2 Cálculo del IPE
 
     .row.justify-content-center.align-items-center.mb-5
-      .col-lg-5
+      .col-lg-5.d-none.d-lg-block
         img(src='@/assets/curso/tema1/20.png')
       .col-lg-7
         .row.justify-content-center.align-items.mb-4
-          .col-lg-2
-            img.img-t(src='@/assets/curso/tema1/21.svg')
-          .col-lg-10.ps-lg-0
+          .col-lg-2.col-md-2.col-5.mb-lg-0.mb-4
+            img(src='@/assets/curso/tema1/21.svg')
+          .col-lg-10.col-md-10
             p.mb-0 El cálculo del IPE requiere una serie histórica de precipitación suficientemente extensa y consistente. La OMM recomienda disponer, como mínimo, de alrededor de treinta años de datos mensuales continuos, aunque registros de mayor longitud son preferibles para mejorar la caracterización estadística de los eventos extremos (WMO, 2012).
         p.mb-0 El procedimiento parte de la revisión de la serie histórica y continúa con la definición de la escala de acumulación, el ajuste de una distribución de probabilidad, la estandarización de la probabilidad obtenida y, finalmente, la determinación del valor del IPE.
 
@@ -256,7 +256,7 @@
       .col-lg-8
         p.mb-3 #[b Ecuación 1.] Ajuste de la distribución de probabilidad
         .row.justify-content-center.align-items-center.mb-4
-          .col-lg-5
+          .col-lg-4.col-md-8
             math.formula(display="block")
               mrow
                 mi P
@@ -293,7 +293,7 @@
               p.mb-0.mx-lg-4.mt-lg-2.mb-lg-1 #[b Ecuación 2.] Cálculo del IPE
             .bg4.mb-0.p-4
               .row.justify-content-center.align-items-center.mb-1
-                .col-lg-7
+                .col-lg-7.col-md-8
                   .formula1 
                     p.mb-0 IPE=Φ⁻¹ [F(x)]
               p.mb-4 donde:
@@ -303,13 +303,13 @@
       p.mb-0 #[b El IPE no corresponde simplemente a la precipitación observada menos el promedio histórico.] El índice transforma la precipitación acumulada mediante una distribución de probabilidad y la convierte en una escala estandarizada, con media igual a cero y desviación estándar igual a uno, lo que permite comparar diferentes lugares y escalas temporales.
 
     .row.justify-content-center.align-items-center.mb-0
-      .col-lg-5
+      .col-lg-5.d-none.d-lg-block
         img(src='@/assets/curso/tema1/26.png')
       .col-lg-7
         .row.justify-content-center.align-items.mb-4
-          .col-lg-2
-            img.img-t(src='@/assets/curso/tema1/27.svg')
-          .col-lg-10.ps-lg-0
+          .col-lg-2.col-md-2.col-5.mb-lg-0.mb-4
+            img(src='@/assets/curso/tema1/27.svg')
+          .col-lg-10.col-md-10
             p.mb-0 El procedimiento se repite para cada escala temporal seleccionada, por ejemplo, IPE-1, IPE-3, IPE-6 o IPE-12, de acuerdo con el propósito del análisis. De esta manera, una misma serie histórica puede generar valores diferentes del IPE según el periodo de acumulación utilizado.
         p.mb-0 La obtención del valor estandarizado constituye el cierre del proceso de cálculo. Su significado debe interpretarse posteriormente a partir del rango en el que se encuentra y de la escala temporal utilizada, siguiendo los criterios desarrollados en el apartado 1.1.
 

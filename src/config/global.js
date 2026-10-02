@@ -77,7 +77,7 @@ export default {
       {
         nombreRuta: 'tema3',
         numero: '3',
-        titulo: 'Tema 3',
+        titulo: 'Modelo de almacenamiento, rendimiento y fiabilidad',
         desarrolloContenidos: true,
       },
     ],

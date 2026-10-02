@@ -8,13 +8,13 @@
       h1 Sistemas de aprovechamiento de agua lluvia
 
     .row.justify-content-center.align-items-center.mb-5
-      .col-lg-5
+      .col-lg-5.d-none.d-lg-block
         img(src='@/assets/curso/tema2/1.png')
       .col-lg-7
         .row.justify-content-center.align-items.mb-4
-          .col-lg-2
-            img.img-t(src='@/assets/curso/tema2/2.svg')
-          .col-lg-10.ps-lg-0
+          .col-lg-2.col-md-2.col-5.mb-lg-0.mb-4
+            img(src='@/assets/curso/tema2/2.svg')
+          .col-lg-10.col-md-10
             p.mb-0 Los sistemas de aprovechamiento de las aguas lluvias permiten captar la precipitación y almacenarla temporalmente para su uso posterior. En general, estos sistemas integran áreas de captación, conducción y almacenamiento, aunque pueden incorporar elementos adicionales de filtración, separación de primeras lluvias, tratamiento, bombeo y distribución, según el uso previsto (García-Ávila et al., 2023).
         p.mb-0 En un sistema de almacenamiento, el agua entra principalmente como precipitación captada, permanece temporalmente almacenada y posteriormente sale por consumo, distribución, pérdidas, evaporación o rebose. Por ello, el tanque no debe analizarse de manera aislada, sino como parte de un equilibrio dinámico entre oferta y demanda.
 
@@ -48,13 +48,13 @@
       h3.mb-0 Capacidad de almacenamiento
 
     .row.justify-content-center.align-items-center.mb-5
-      .col-lg-5
+      .col-lg-5.d-none.d-lg-block
         img(src='@/assets/curso/tema2/5.png')
       .col-lg-7
         .row.justify-content-center.align-items.mb-4
-          .col-lg-2
-            img.img-t(src='@/assets/curso/tema2/6.svg')
-          .col-lg-10.ps-lg-0
+          .col-lg-2.col-md-2.col-5.mb-lg-0.mb-4
+            img(src='@/assets/curso/tema2/6.svg')
+          .col-lg-10.col-md-10
             p.mb-0 La capacidad de almacenamiento es el volumen máximo de agua que el sistema puede contener bajo las condiciones de diseño. Se expresa normalmente en litros o metros cúbicos. Sin embargo, una mayor capacidad no implica necesariamente un mejor desempeño. Un tanque sobredimensionado puede tener una baja utilización, mientras que uno demasiado pequeño puede provocar reboses frecuentes y déficits. Por ello, la capacidad debe analizarse junto con la precipitación, la demanda y el nivel de servicio esperado (Khan et al., 2022).
         p.mb-4 La capacidad de almacenamiento (S#[sub max]) es el volumen máximo que puede contener el tanque o depósito. Se expresa normalmente en litros (L) o metros cúbicos (m#[sup 3]).
         p.mb-0 En un modelo de balance temporal, el almacenamiento del periodo t puede representarse mediante:
@@ -66,9 +66,11 @@
             .col-lg-3
               img.img-t.img-a(src='@/assets/curso/tema2/7.svg')
             .col-lg-4
-              h3.mb-3.text-white Ecuación 3
-              .formula1
-                p.mb-0 S#[sub t] = min[S#[sub max'] S#[sub t-1] + Q#[sub t] - Y#[sub t] - O#[sub t]]
+              p.mb-3.text-white #[b Ecuación 3]
+              .row.justify-content-center.align-items-center.mb-0
+                .col-lg-12.col-md-8
+                  .formula1
+                    p.mb-0 S#[sub t] = min[S#[sub max'] S#[sub t-1] + Q#[sub t] - Y#[sub t] - O#[sub t]]
             .col-lg-5.text-white
               p.mb-0 donde:
               p.mb-0 S#[sub t]: volumen almacenado al final del periodo t.
@@ -85,9 +87,11 @@
             .col-lg-3
               img.img-t.img-a(src='@/assets/curso/tema2/8.svg')
             .col-lg-4
-              h3.mb-3 Ecuación 4
-              .formula1
-                p.mb-0 0 ≤ S#[sub t] ≤ S#[sub max]
+              p.mb-3 #[b Ecuación 4]
+              .row.justify-content-center.align-items-center.mb-0
+                .col-lg-12.col-md-8
+                  .formula1
+                    p.mb-0 0 ≤ S#[sub t] ≤ S#[sub max]
             .col-lg-5
               p.mb-0 La capacidad constituye, por tanto, una variable de diseño que puede modificarse para analizar distintas alternativas. Por ejemplo, pueden evaluarse capacidades de 1, 2, 5, 10 y 20 m#[sup 3] y observar cómo cambia el desempeño del sistema.
 
@@ -105,7 +109,7 @@
               .col-lg-12 
                 p.mb-4 Supóngase un tanque con una capacidad máxima de:
                 .row.justify-content-center.align-items-center.mb-0
-                  .col-lg-7
+                  .col-lg-7.col-md-8
                     .formula2
                       p.mb-0 S#[sub max] = 10 m#[sup 3]
           .tarjeta.color-a.p-4(titulo="Condiciones del periodo")
@@ -113,7 +117,7 @@
               .col-lg-12 
                 p.mb-4 Si al inicio del periodo hay 6 m#[sup 3] almacenados, ingresan 7 m#[sup 3], la demanda es de 3 m#[sup 3] y no se presentan otras pérdidas o salidas:
                 .row.justify-content-center.align-items-center.mb-0
-                  .col-lg-7
+                  .col-lg-7.col-md-8
                     .formula2
                       p.mb-0 S#[sub t] = 6 + 7 - 3 = 10 m#[sup 3]
           .tarjeta.color-a.p-4(titulo="Capacidad máxima")
@@ -156,9 +160,9 @@
             .col-lg-11
               .row.justify-content-center.align-items-center.mb-0
                 .col-lg-6.mb-lg-0.mb-4
-                  p.mb-4 Para cada periodo t, el comportamiento del almacenamiento puede representarse mediante:
-                  .row.justify-content.mb-4
-                    .col-lg-7
+                  p.mb-0 Para cada periodo t, el comportamiento del almacenamiento puede representarse mediante:
+                  .row.justify-content.mb-0
+                    .col-lg-7.col-md-8
                       .formula2
                         p.mb-0 S#[sub t] = min [S#[sub max'] S#[sub t-1] + Q#[sub t] - Y#[sub t] - O#[sub t]]
                   p.mb-4 donde:
@@ -168,13 +172,13 @@
                   p.mb-0 Y#[sub t]: volumen suministrado o utilizado.
                   p.mb-0 O#[sub t]: pérdidas o salidas del sistema.
                   p.mb-0 S#[sub max]: capacidad máxima del tanque.
-                .col-lg-6.col-md-8.col-10.bi
-                  img(src='@/assets/curso/tema2/11.png').mb-4
+                .col-lg-6.bi
+                  img.img-a.img-t(src='@/assets/curso/tema2/11.png').mb-4
                   p.mb-0 Existe una condición de falla cuando:
                   .row.justify-content-center.align-items-center.mb-2
-                    .col-lg-4
-                      h4.mb-0 Ecuación 5
-                    .col-lg-8
+                    .col-lg-4.col-md-4
+                      p.mb-0 #[b Ecuación 5]
+                    .col-lg-8.col-md-8
                       .formula2
                         p.mb-0 Y#[sub t] < D#[sub t]
                   p.mb-0 donde D_t corresponde a la demanda del periodo t.
@@ -185,9 +189,9 @@
                   p.mb-0 #[b Pregunta:] ¿cuántas veces falla el sistema?
                   p.mb-4 La fiabilidad representa la probabilidad de que el sistema satisfaga la demanda en un periodo determinado y permite medir la frecuencia de falla.
                   p.mb-4 Puede calcularse como:
-                  h4.mb-4 Ecuación 6
+                  p.mb-4 #[b Ecuación 6]
                   .row.justify-content.align-items-center.mb-2
-                    .col-lg-7
+                    .col-lg-7.col-md-8
                       .formula2
                         math.recta(display="block")
                           mrow
@@ -206,8 +210,8 @@
                                 mi N
                                 mi f
                               mi N
-                .col-lg-6.col-md-8.col-10.bi
-                  img(src='@/assets/curso/tema2/12.png').mb-4
+                .col-lg-6.bi
+                  img.img-a.img-t(src='@/assets/curso/tema2/12.png').mb-4
                   p.mb-0 donde:
                   p.mb-0 N#[sub s]: número de periodos satisfactorios.
                   p.mb-0 Nf: número de periodos de falla.
@@ -220,9 +224,9 @@
                   p.mb-0 #[b Pregunta:] ¿qué tan rápido se recupera el sistema?
                   p.mb-4 La resiliencia representa la probabilidad de que el sistema pase de un estado de falla a un estado satisfactorio en el siguiente periodo. Permite medir la velocidad de recuperación.
                   p.mb-4 Puede expresarse como:
-                  h4.mb-4 Ecuación 7
+                  p.mb-4 #[b Ecuación 7]
                   .row.justify-content.align-items-center.mb-2
-                    .col-lg-7
+                    .col-lg-7.col-md-8
                       .formula2
                         math.recta(display="block")
                           mrow
@@ -254,12 +258,12 @@
                   p.mb-0 S#[sub t+1]: estado satisfactorio del sistema en el periodo siguiente, t+1.
                   p.mb-0 N#[sub FS]: número de transiciones de un estado de falla a un estado satisfactorio.
                   p.mb-0 N#[sub F]: número de periodos en estado de falla desde los cuales se evalúa la recuperación.
-                .col-lg-6.col-md-8.col-10.bi
-                  img(src='@/assets/curso/tema2/13.png').mb-4
+                .col-lg-6.bi
+                  img.img-a.img-t(src='@/assets/curso/tema2/13.png').mb-4
                   p.mb-4 También puede relacionarse con la duración media de las fallas:
-                  h4.mb-4 Ecuación 8
+                  p.mb-4 #[b Ecuación 8]
                   .row.justify-content.align-items-center.mb-2
-                    .col-lg-7
+                    .col-lg-7.col-md-8
                       .formula2
                         math.recta(display="block")
                           mrow
@@ -290,9 +294,9 @@
                   p.mb-0 #[b Pregunta:] ¿qué tan grave es la falla del sistema?
                   p.mb-4 La vulnerabilidad representa la magnitud o severidad del déficit cuando el sistema falla y permite medir las consecuencias de dicha falla.
                   p.mb-4 El déficit de un periodo puede expresarse como:
-                  h4.mb-4 Ecuación 9
+                  p.mb-4 #[b Ecuación 9]
                   .row.justify-content.align-items-center.mb-2
-                    .col-lg-7
+                    .col-lg-7.col-md-8
                       .formula2
                         math.recta(display="block")
                           mrow
@@ -319,9 +323,9 @@
                   p.mb-0 D#[sub t]: demanda requerida en el periodo t.
                   p.mb-4 Y#[sub t]: volumen efectivamente suministrado en el periodo t.
                   p.mb-4 y el déficit acumulado durante un evento de falla como:
-                  h4.mb-4 Ecuación 10
+                  p.mb-4 #[b Ecuación 10]
                   .row.justify-content.align-items-center.mb-2
-                    .col-lg-7
+                    .col-lg-7.col-md-8
                       .formula2
                         math.recta(display="block")
                           mrow
@@ -348,15 +352,15 @@
                               mi Y
                               mi t
                             mo(stretchy="false") )
-                .col-lg-6.col-md-8.col-10.bi
-                  img(src='@/assets/curso/tema2/14.png').mb-4
+                .col-lg-6.bi
+                  img.img-a.img-t(src='@/assets/curso/tema2/14.png').mb-4
                   p.mb-0 donde:
                   p.mb-0 D#[sub f.j]: déficit acumulado durante el evento de falla j.
                   p.mb-4 k: número de periodos consecutivos durante los cuales ocurre el evento de falla.
                   p.mb-4 Una medida de vulnerabilidad puede calcularse mediante:
-                  h4.mb-4 Ecuación 11
+                  p.mb-4 #[b Ecuación 11]
                   .row.justify-content.align-items-center.mb-2
-                    .col-lg-7
+                    .col-lg-7.col-md-8
                       .formula2
                         math.recta(display="block")
                           mrow
@@ -388,8 +392,8 @@
                 .col-lg-6.mb-lg-0.mb-4
                   p.mb-4 Un buen desempeño se presenta cuando el sistema falla pocas veces (alta fiabilidad), se recupera rápidamente (alta resiliencia) y, cuando falla, las consecuencias son limitadas (baja vulnerabilidad).
                   p.mb-0 La fiabilidad permite establecer con qué frecuencia el sistema cumple la condición de servicio definida; la resiliencia permite analizar qué tan rápidamente el sistema se recupera tras entrar en un estado de falla; y la vulnerabilidad permite determinar la magnitud o severidad de las consecuencias asociadas a dicha falla. Estas tres métricas no miden lo mismo: un sistema puede presentar pocas fallas, pero cuando ocurren, estas pueden ser prolongadas o generar déficits importantes.
-                .col-lg-6.col-md-8.col-10.bi
-                  img(src='@/assets/curso/tema2/15.png')
+                .col-lg-6.bi
+                  img.img-a.img-t(src='@/assets/curso/tema2/15.png')
               .bg1.p-4
                 p.mb-0 Por ello, el análisis conjunto de estas dimensiones proporciona una visión más completa del comportamiento del sistema ante la variabilidad de la precipitación y de la demanda. La capacidad determina cuánto puede almacenar el sistema; la fiabilidad, con qué frecuencia cumple; la resiliencia, qué tan rápidamente se recupera; y la vulnerabilidad, qué tan grave es la falla cuando ocurre. Esta relación será fundamental para analizar posteriormente diferentes capacidades de almacenamiento y construir las curvas de almacenamiento, rendimiento y fiabilidad (SRY).
 
@@ -410,9 +414,9 @@
 
     .row.justify-content-center.align-items-center.mb-5
       .col-lg-3
-        h4.mb-4 Ecuación 12
+        p.mb-4 #[b Ecuación 12]
         .row.justify-content.align-items-center.mb-2
-          .col-lg-7
+          .col-lg-7.col-md-8
             .formula1
               p.mb-0 Y#[sub t] ≥ D#[sub t]
         p.mb-0 donde:
@@ -420,15 +424,15 @@
         p.mb-4 D#[sub t]: demanda requerida.
         p.mb-4 Cuando:
         .row.justify-content.align-items-center.mb-2
-          .col-lg-7
+          .col-lg-7.col-md-8
             .formula1
               p.mb-0 Y#[sub t] < D#[sub t]
-        p.mb-0 se considera que existe una falla o un estado insatisfactorio.
+        p.mb-4.mb-lg-0 se considera que existe una falla o un estado insatisfactorio.
       .col-lg-6
-        .bg1.p-4
+        .bg1.p-4.mb-lg-0.mb-4
           p.mb-4 Una forma sencilla de calcular la fiabilidad de ocurrencia es:
           .row.justify-content-center.align-items-center.mb-2
-            .col-lg-7
+            .col-lg-7.col-md-8
               .formula1
                 math.recta(display="block")
                   mrow
@@ -445,7 +449,7 @@
           p.mb-4 N: número total de periodos evaluados.
           p.mb-0 También puede expresarse como:
           .row.justify-content-center.align-items-center.mb-2
-            .col-lg-7
+            .col-lg-7.col-md-8
               .formula1
                 math.recta(display="block")
                   mrow
@@ -463,7 +467,7 @@
         p.mb-4 #[b Ejemplo]
         p.mb-4 Si se analizan 120 meses y en 12 meses el sistema no logra satisfacer la demanda:
         .row.justify-content.align-items-center.mb-2
-          .col-lg-10
+          .col-lg-10.col-md-8
             .formula1
               math.recta(display="block")
                 mrow
@@ -476,7 +480,7 @@
                       mi 12
                     mi 120
         .row.justify-content.align-items-center.mb-2
-          .col-lg-10
+          .col-lg-10.col-md-8
             .formula1
               p.mb-0 R= 0,90 = 90 %
         p.mb-0 Esto significa que el sistema fue capaz de satisfacer la condición de servicio establecida durante el 90 % de los periodos evaluados.
@@ -501,9 +505,9 @@
     .row.justify-content-center.align-items-center.mb-5
       .col-lg-3
         p.mb-4 Matemáticamente:
-        h4.mb-4 Ecuación 13
+        p.mb-4 #[b Ecuación 13]
         .row.justify-content.align-items-center.mb-2
-          .col-lg-10
+          .col-lg-10.col-md-8
             .formula1
               p.mb-0 Res = P(X#[sub t+1] ∈ S │ X#[sub t] ∈ F)
         p.mb-0 donde:
@@ -512,7 +516,7 @@
         p.mb-4 X#[sub t]: estado del sistema en el periodo t.
         p.mb-4 En términos de una serie temporal, puede estimarse como:
         .row.justify-content.align-items-center.mb-2
-          .col-lg-10
+          .col-lg-10.col-md-8
             .formula1
               math.recta(display="block")
                 mrow
@@ -526,13 +530,13 @@
                       mi N
                       mi F
         p.mb-0 donde:
-        p.mb-0 N#[sub FS]: número de transiciones de falla → satisfactorio.
-      .col-lg-6
+        p.mb-4.mb-lg-0 N#[sub FS]: número de transiciones de falla → satisfactorio.
+      .col-lg-6.mb-lg-0.mb-4
         .bg1.p-4
           p.mb-4 N#[sub F]: número de periodos en estado de falla desde los cuales se evalúa la recuperación.
           p.mb-4 Otra forma ampliamente utilizada relaciona la resiliencia con la duración media de las fallas:
           .row.justify-content.align-items-center.mb-2
-            .col-lg-7
+            .col-lg-7.col-md-8
               .formula1
                 math.recta(display="block")
                   mrow
@@ -571,7 +575,7 @@
       .col-lg-3
         p.mb-4 La duración media es:
         .row.justify-content.align-items-center.mb-2
-          .col-lg-10
+          .col-lg-10.col-md-8
             .formula1
               math.recta(display="block")
                 mrow
@@ -596,7 +600,7 @@
                   mtext &nbsp;meses
         p.mb-4 Por tanto:
         .row.justify-content.align-items-center.mb-2
-          .col-lg-10
+          .col-lg-10.col-md-8
             .formula1
               math.recta(display="block")
                 mrow
@@ -614,13 +618,13 @@
       h4.mb-0 Vulnerabilidad
 
     .row.justify-content-center.align-items-center.mb-5
-      .col-lg-5
+      .col-lg-5.d-none.d-lg-block
         img(src='@/assets/curso/tema2/19.png')
       .col-lg-7
         .row.justify-content-center.align-items.mb-4
-          .col-lg-2
-            img.img-t(src='@/assets/curso/tema2/20.svg')
-          .col-lg-10.ps-lg-0
+          .col-lg-2.col-md-2.col-5.mb-lg-0.mb-4
+            img(src='@/assets/curso/tema2/20.svg')
+          .col-lg-10.col-md-10
             p.mb-0 La vulnerabilidad se refiere a la gravedad de las consecuencias asociadas a las fallas del sistema. Hashimoto et al. (1982) distinguen así tres dimensiones complementarias del desempeño: fiabilidad, relacionada con la frecuencia de las fallas; resiliencia, relacionada con la recuperación; y vulnerabilidad, relacionada con la magnitud o severidad de las consecuencias de la falla.
         p.mb-0 La vulnerabilidad responde a una tercera pregunta:
         p.mb-0 #[b Cuando el sistema falla, ¿qué tan grave es la falla?]
@@ -631,7 +635,7 @@
     .row.justify-content-center.align-items-center.mb-5
       .col-lg-7
         .row.justify-content.align-items-center.mb-0
-          .col-lg-7
+          .col-lg-7.col-md-8
             .formula1
               math.recta(display="block")
                 mrow
@@ -649,12 +653,12 @@
                     mi t
         p.mb-0 cuando:
         .row.justify-content.align-items-center.mb-0
-          .col-lg-7
+          .col-lg-7.col-md-8
             .formula1
               p.mb-0 Y#[sub t] < D#[sub t]
         p.mb-0 El déficit acumulado durante un evento de falla puede calcularse como:
         .row.justify-content.align-items-center.mb-2
-          .col-lg-7
+          .col-lg-7.col-md-8
             .formula1
               math.recta(display="block")
                 mrow
@@ -684,7 +688,7 @@
         p.mb-0 donde k corresponde al número de periodos consecutivos durante los cuales ocurre el evento de falla.
         p.mb-0 Una medida de vulnerabilidad puede entonces expresarse como el déficit promedio de los eventos de falla:
         .row.justify-content.align-items-center.mb-0
-          .col-lg-7
+          .col-lg-7.col-md-8
             .formula1
               math.recta(display="block")
                 mrow
@@ -710,7 +714,7 @@
         p.mb-0 V: vulnerabilidad.
         p.mb-0 M: número de eventos de falla.
         p.mb-3 D#[sub f.j]: déficit acumulado durante el evento de falla j.
-        p.mb-0 También existen formulaciones que emplean la magnitud máxima del déficit como indicador de vulnerabilidad. La elección depende del criterio de evaluación adoptado para el sistema.
+        p.mb-4.mb-lg-0 También existen formulaciones que emplean la magnitud máxima del déficit como indicador de vulnerabilidad. La elección depende del criterio de evaluación adoptado para el sistema.
       .col-lg-5
         .bg1.p-4
           p.mb-0 #[b Ejemplo]
@@ -735,7 +739,7 @@
                       td 3 m#[sup 3]
           p.mb-0 Entonces:
           .row.justify-content.align-items-center.mb-0
-            .col-lg-10
+            .col-lg-10.col-md-8
               .formula1
                 math(display="block")
                   mrow
@@ -750,7 +754,7 @@
                         mn 3
                       mn 3
           .row.justify-content.align-items-center.mb-0
-            .col-lg-10
+            .col-lg-10.col-md-8
               .formula1
                 math(display="block")
                   mrow
@@ -765,7 +769,7 @@
           p.mb-4 Esto significa que el déficit promedio asociado a los eventos de falla fue de 3,33 m³.
           p.mb-0 Si se utiliza como criterio la máxima magnitud:
           .row.justify-content.align-items-center.mb-0
-            .col-lg-10
+            .col-lg-10.col-md-8
               .formula1
                 p.mb-0 V#[sub max] = 5 m#[sup 3]
           p.mb-0 Por ello, la definición de vulnerabilidad utilizada debe explicitarse para evitar la mezcla de indicadores diferentes.
@@ -799,7 +803,7 @@
             p.mb-0 #[b Pregunta:] ¿con qué frecuencia satisface la demanda?
             p.mb-0 #[b ¿Cómo se calcula?]
             .row.justify-content.align-items-center.mb-2
-              .col-lg-10
+              .col-lg-10.col-md-8
                 .formula3
                   math.recta(display="block")
                     mrow
@@ -818,12 +822,12 @@
             p.mb-0 #[b Pregunta:] ¿qué tan rápido se recupera después de fallar?
             p.mb-0 ¿Cómo se calcula?
             .row.justify-content.align-items-center.mb-2
-              .col-lg-5
+              .col-lg-5.col-md-8
                 .formula3
                   p.mb-0 Res = P(S#[sub t+1] │ F#[sub t])
               .col-lg-1
                 p.mb-0 o
-              .col-lg-5
+              .col-lg-5.col-md-8
                 .formula3
                   math.recta(display="block")
                     mrow
@@ -850,7 +854,7 @@
             p.mb-0 #[b Pregunta:] ¿qué tan grave es la falla?
             p.mb-0 Puede analizarse mediante el déficit promedio:
             .row.justify-content.align-items-center.mb-2
-              .col-lg-4
+              .col-lg-4.col-md-8
                 .formula3
                   math.recta(display="block")
                     mrow
@@ -874,7 +878,7 @@
                           mi j
               .col-lg-3
                 p.mb-0 o mediante la máxima magnitud:
-              .col-lg-4
+              .col-lg-4.col-md-8
                 .formula3
                   p.mb-0 V#[sub max] = max (D#[sub f.j])
             p.mb-0 #[b Interpretación:] menor es mejor. Valores bajos indican impactos menos severos cuando el sistema falla.
@@ -886,17 +890,17 @@
             p.mb-0 #[b 2. Balance de entradas y salidas]
             p.mb-0 En cada periodo se calcula:
             .row.justify-content.align-items-center.mb-3
-              .col-lg-7
+              .col-lg-7.col-md-8
                 .formula3
                   p.mb-0 S#[sub t] = min [S#[sub max'] S#[sub t-1] + Q#[sub t] - Y#[sub t] - O#[sub t]]
             .br.mb-4
             p.mb-0 #[b 3. Estado del sistema]
             p.mb-0 El resultado permite establecer si el sistema se encuentra en:
             .row.justify-content.align-items-center.mb-3
-              .col-lg-5
+              .col-lg-5.col-md-6
                 .formula3
                   p.mb-0 Y#[sub t] ≥ D#[sub t]
-              .col-lg-5
+              .col-lg-5.col-md-6
                 .formula3
                   p.mb-0 Y#[sub t]< D#[sub t]
             .br.mb-4
@@ -921,7 +925,7 @@
             .br.mb-4
             p.mb-0 #[b 1. Cálculo de fiabilidad]
             .row.justify-content.align-items-center.mb-3
-              .col-lg-5
+              .col-lg-5.col-md-6
                 .formula3
                   math.recta(display="block")
                     mrow
@@ -935,7 +939,7 @@
                         msub
                           mi 12
                         mi 120
-              .col-lg-5
+              .col-lg-5.col-md-6
                 .formula3
                   p.mb-0 R = 0,90
             p.mb-0 Fiabilidad = 90 %.
@@ -943,7 +947,7 @@
             .br.mb-4
             p.mb-0 #[b 2. Cálculo de resiliencia]
             .row.justify-content.align-items-center.mb-0
-              .col-lg-6
+              .col-lg-6.col-md-6
                 .formula3
                   math.recta(display="block")
                     mrow
@@ -966,7 +970,7 @@
                       mo =
                       mn 2
                       mtext &nbsp;meses
-              .col-lg-6
+              .col-lg-6.col-md-6
                 .formula3
                   math.recta(display="block")
                     mrow
@@ -982,7 +986,7 @@
             .br.mb-4
             p.mb-0 #[b 3. Cálculo de vulnerabilidad]
             .row.justify-content.align-items-center.mb-0
-              .col-lg-6
+              .col-lg-6.col-md-6
                 .formula3
                   math.recta(display="block")
                     mrow
@@ -1000,7 +1004,7 @@
                           mo +
                           mn 4
                         mn 4
-              .col-lg-6
+              .col-lg-6.col-md-6
                 .formula3
                   p.mb-0 V = 3,5 m#[sup 3]
             p.mb-0 #[b Vulnerabilidad promedio = 3,5 m#[sup 3] por evento de falla.]
@@ -1128,13 +1132,13 @@
       h3.mb-0 Volumen
 
     .row.justify-content-center.align-items-center.mb-5
-      .col-lg-5
+      .col-lg-5.d-none.d-lg-block
         img(src='@/assets/curso/tema2/26.png')
       .col-lg-7
         .row.justify-content-center.align-items.mb-4
-          .col-lg-2
-            img.img-t(src='@/assets/curso/tema2/27.svg')
-          .col-lg-10.ps-lg-0
+          .col-lg-2.col-md-2.col-5.mb-lg-0.mb-4
+            img(src='@/assets/curso/tema2/27.svg')
+          .col-lg-10.col-md-10
             p.mb-0.my-lg-2 El volumen de almacenamiento es la cantidad de agua que el sistema puede contener. Para su análisis deben diferenciarse al menos tres conceptos:
         ul.lista-ul.mb-4
           li.d-flex.mb-0
@@ -1148,14 +1152,14 @@
             p.mb-0 #[b Volumen suministrado o rendimiento:] cantidad de agua que el sistema entrega para satisfacer una demanda durante un periodo determinado.
         p.mb-0 Los modelos de balance hídrico utilizados en sistemas de aprovechamiento de aguas lluvias consideran variables como la precipitación, el área de captación, el coeficiente de escorrentía, el almacenamiento, la demanda, el suministro y el rebose (Chapa et al., 2020).
     
-    p.mb-4 Una representación conceptual del balance puede expresarse como:
+    p.mb-lg-0.mb-4 Una representación conceptual del balance puede expresarse como:
 
     .row.justify-content-center.align-items-end.mb-5
       .col-lg-8
         .bg8.p-4.mb-0 
-          h3.mb-3 Ecuación 14
+          p.mb-3 #[b Ecuación 14]
           .row.justify-content.align-items-center.mb-0
-            .col-lg-5
+            .col-lg-5.col-md-8
               .formula1
                 p.mb-0 S#[sub t] = S#[sub t-1] + Q#[sub t] - Y#[sub t] - O#[sub t]
           p.mb-0 donde:
@@ -1164,7 +1168,7 @@
           p.mb-0 Q#[sub t]: volumen de entrada.
           p.mb-0 Y#[sub t]: volumen suministrado.
           p.mb-0 O#[sub t]: pérdidas o salidas del sistema, incluido el rebose.
-      .col-lg-4
+      .col-lg-4.d-none.d-lg-block
         img(src='@/assets/curso/tema2/28.png')
 
     .row.justify-content-center.align-items-center.mb-5
@@ -1175,14 +1179,14 @@
           .col-lg-6.col-md-9.col-12.mb-lg-0.mb-0.d-none.d-lg-block(data-aos="fade-right")
             img.img-t(src='@/assets/curso/tema2/30.svg')
           .col-lg-6(data-aos="fade-left")
-            .bg3.mb-0.p-4
-              p.mb-0 El modelo debe respetar el límite físico:
-            .bg4.mb-0.p-4
-              .row.justify-content.align-items-center.mb-0
-                .col-lg-7
+            .bg3.mb-0.p-3
+              p.mb-0.mx-lg-2 El modelo debe respetar el límite físico:
+            .bg4.mb-0.p-4.p-lg-3
+              .row.justify-content.align-items-center.mb-0.mx-lg-1.mt-lg-1.mb-lg-1
+                .col-lg-7.col-md-8
                   .formula1
                     p.mb-0 0 ≤ S#[sub t] ≤ S#[sub max]
-              p.mb-0 Este balance permite representar cómo cambia el volumen almacenado de un periodo a otro en función del agua que ingresa al sistema y de los volúmenes que salen de este. Para facilitar la comprensión de estos flujos, se presenta el siguiente recurso.
+              p.mb-0.mx-lg-2 Este balance permite representar cómo cambia el volumen almacenado de un periodo a otro en función del agua que ingresa al sistema y de los volúmenes que salen de este. Para facilitar la comprensión de estos flujos, se presenta el siguiente recurso.
 
     .tit.mb-5(data-aos="fade-right")
       img(:src="require_src('@/assets/curso/tema1/sub.svg')")
@@ -1247,13 +1251,13 @@
       h3.mb-0 Configuraciones de uso
 
     .row.justify-content-center.align-items-center.mb-5
-      .col-lg-5
+      .col-lg-5.d-none.d-lg-block
         img(src='@/assets/curso/tema2/32.png')
       .col-lg-7
-        .row.justify-content-center.align-items.mb-3
-          .col-lg-2
-            img.img-t(src='@/assets/curso/tema2/33.svg')
-          .col-lg-10.ps-lg-0
+        .row.justify-content-center.align-items.mb-4
+          .col-lg-2.col-md-2.col-5.mb-lg-0.mb-4
+            img(src='@/assets/curso/tema2/33.svg')
+          .col-lg-10.col-md-10
             p.mb-0.my-lg-2 El rendimiento de un sistema no depende solamente de cuánto llueve ni de cuánto puede almacenar el tanque. También depende de para qué se utiliza el agua y de cuándo se presenta la demanda.
         p.mb-3 La literatura muestra que los sistemas de aprovechamiento pueden destinar el agua de lluvia a usos como la descarga de sanitarios, el riego, el lavado de vehículos, la limpieza y otros usos no potables, según las condiciones del sistema y los requerimientos de calidad (Khan et al., 2022).
         p.mb-3 Para el análisis del componente pueden distinguirse:
@@ -1287,7 +1291,7 @@
             p.mb-0 La configuración de uso define cómo se distribuye el agua almacenada entre las demandas que debe satisfacer el sistema. Esta decisión tiene una incidencia directa sobre el balance de agua, ya que una misma cantidad almacenada puede generar resultados diferentes según si existe una única demanda, varias demandas, una jerarquía de usos o una demanda que cambia a lo largo del año. Por esta razón, la configuración de uso debe establecerse antes de evaluar el rendimiento del sistema.
 
     .row.justify-content-center.align-items-center.mb-5
-      .col-lg-5
+      .col-lg-5.d-none.d-lg-block
         img(src='@/assets/curso/tema2/35.png')
       .col-lg-7
         p.mb-4 En una configuración única, el análisis se centra en determinar si el volumen disponible permite satisfacer una demanda específica. Cuando existen múltiples demandas, el modelo debe considerar cómo se distribuye el agua disponible entre los distintos usos. Si además se establece una prioridad, el orden de atención se convierte en una regla operativa que puede modificar los déficits individuales de cada demanda.
