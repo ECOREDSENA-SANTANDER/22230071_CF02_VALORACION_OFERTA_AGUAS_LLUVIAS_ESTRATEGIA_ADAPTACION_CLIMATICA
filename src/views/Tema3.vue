@@ -333,7 +333,7 @@
               .tarjeta.bg-white.p-4.p-lg-5.h-100
                 TarjetaAudio.color-acento-botones.mb-0(
                 texto="Pódcast: no basta con un tanque grande"
-                :audio="require_src('@/assets/actividad/audio/end-game-success.mp3')"
+                :audio="require_src('@/assets/actividad/audio/Podcast_CF2-22230071-Valoracion_de_la_oferta_de_aguas_lluvias_como_estrategia_de_adaptacion_climatica.mp3')"
               ).mb-0
                 p.mb-0 
 
